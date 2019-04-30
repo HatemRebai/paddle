@@ -1,5 +1,8 @@
  var ERP={
-    Formation : [],
-    Manager : [],
-    Coash : [],
-};
+    Formation :  [],
+    Manager: [],    
+    Coash:[],
+    Condidat:[],
+    Conge:[],
+    Finance:[]
+} 
