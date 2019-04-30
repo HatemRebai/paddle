@@ -56,7 +56,7 @@
     </style>
 </head>
 
-<body>
+<body onload ="remplir()">
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -71,7 +71,7 @@
             <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</a>
+font-size: 16px;"> <a href="./index.html" class="btn btn-danger square-btn-adjust">Logout</a>
             </div>
         </nav>
         <!-- /. NAV TOP  -->
@@ -93,13 +93,13 @@ font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</
                             <a  href="Personnel.html"><i class="fa fa-qrcode fa-3x"></i> Personnels</a>
                         </li>	
                           <li  >
-                                <a class="active-menu" href="Condidats.html"><i class="fa fa-table fa-3x"></i> Condidats</a>
+                                <a class="active-menu" href="Condidats.html"><i class="fa fa-table fa-3x"></i> Candidats</a>
                             </li>
                         <li  >
-                            <a  href="#"><i class="fa fa-edit fa-3x"></i> Finance </a>
+                            <a  href="finance.html"><i class="fa fa-edit fa-3x"></i> Finance </a>
                         </li>	
                         <li>
-                                <a href="href="conge.html""><i class="fa fa-edit fa-3x"></i> Conge </a>
+                                <a href="conge.html"><i class="fa fa-edit fa-3x"></i> Conge </a>
                             </li>
                 </ul>
 
@@ -111,70 +111,50 @@ font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</
         <div id="page-wrapper">
             <div id="page-inner">
                 <fieldset>
-                    <legend>Ajout Condidat:</legend>
+                    <legend>Ajout Candidat:</legend>
                     <div class="row">
                         <div id="center">
                             <form role="form">
                                 <div class="form-group input-group">
                                     <span class="input-group-addon"><i class="fa fa-user icon"></i></span>
-                                    <input type="text" class="form-control" placeholder="Nom" id="nom">
+                                    <input type="text" class="form-control" placeholder="Nom" id="nomc">
                                 </div>
                                 <div class="form-group input-group">
                                         <span class="input-group-addon"><i class="fa fa-user icon"></i></span>
-                                        <input type="text" class="form-control" placeholder="Prenom" id="prenom">
+                                        <input type="text" class="form-control" placeholder="Prenom" id="prenomc">
                                     </div>
                                 <div class="form-group input-group">
                                         <span class="input-group-addon"> <i class="fa fa-envelope icon"></i></span>
-                                        <input class="form-control" type="email" placeholder="Email" id="email">
+                                        <input class="form-control" type="email" placeholder="Email" id="emailc">
                                       </div>
                                       <div class="form-group input-group">
                                             <span class="input-group-addon"> <i class="fa fa-phone"></i></span>
-                                            <input class="form-control" type="tel" id="tel">
+                                            <input class="form-control" type="tel" id="telc">
                                           </div>
                                    
                                     <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>
-                                            <textarea class="form-control" rows="4" cols="20" placeholder="Addresse" id="addr">
-        
-                                        </textarea>
+                                            <input type="text" class="form-control" placeholder="Addresse" id="addrc">        
+                                        </textarea> 
                                         </div>
-                                        <div class="form-group">
-                                                <label>Level</label>
-                                                <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" value="All" id="All" />All
-                                                        </label>
-                                                    </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" value="Level One" id="Level One" />Level One
-                                                    </label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" value="Level Two" id="Level Two"/>Level Two
-                                                    </label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox" value="Level Three" id="Level Three"/>Level Three
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group"> 
-                                                <select class="form-control">
-                                                     <option>Select formation </option>
-                                                    <option>formation One </option>
-                                                    <option>formation Two  </option>
-                                                    <option>formation Three  </option>
-                                                    <option>formation Four  </option>
+                                        <form id="myform" method="post">
+                                            <!-- <div class="form-group">  -->
+                                                <select id="levelc" class="form-control">
+                                                        <option name="checkbox" value="Select level">Select level</option>
+                                                        <option name="checkbox"value="level One">level One </option>
+                                                        <option name="checkbox" value="level Two ">level Two  </option>
+                                                        <option name="checkbox" value="level Three">level Three  </option>
+                                                        <option name="checkbox" value="level Four"> level Four  </option>
+                                                        <option name="checkbox" value="level Five">level Five  </option>
+                                                        
                                                 </select>
-                                            </div>
-                               
-                                <button type="reset" class="btn btn-primary">Annuler</button>
+                                            <!-- </div> -->
+                                            <button type="button" class="btn btn-primary"  onclick="ajoutCandidat()">Ajouter</button>
+                                            <button type="reset" class="btn btn-primary">Annuler</button>
+                                            <button type="button" class="btn btn-primary"  onclick="modif()">modifier</button>
 
-                                <button type="submit" class="btn btn-primary">Ajouter</button>
 
+                                        </form>
                             </form>
                         </div>
                     </div>
@@ -191,9 +171,12 @@ font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</
         <!-- METISMENU SCRIPTS -->
         <script src="assets/js/jquery.metisMenu.js"></script>
         <!-- CUSTOM SCRIPTS -->
-        <script src="assets/js/custom.js"></script>
+        <!-- <script src="assets/js/custom.js"></script> -->
 
+<script src="Enties/Personne.js"></script>
+<script src="Enties/Condidat.js"></script>
+<script src="Enties/LocalStorage.js"></script>
 
+<script src="Metier/CondidatMetier.js"></script>
 </body>
-
 </html>

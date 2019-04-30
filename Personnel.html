@@ -67,10 +67,8 @@ fieldset
                 </button>
                 <a class="navbar-brand" href="index.html">Binary admin</a> 
             </div>
-  <div style="color: white;
-padding: 15px 50px 5px 50px;
-float: right;
-font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+  <div style="color: white;padding: 15px 50px 5px 50px; float: right;font-size: 16px;"> 
+    Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>   
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
@@ -94,10 +92,10 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                             <a    href="Condidats.html"><i class="fa fa-table fa-3x"></i> Condidats</a>
                         </li>
                     <li  >
-                        <a  href="#"><i class="fa fa-edit fa-3x"></i> Finance </a>
+                        <a  href="finance.html"><i class="fa fa-edit fa-3x"></i> Finance </a>
                     </li>	
                     <li>
-                            <a href="#"><i class="fa fa-edit fa-3x"></i> Conge </a>
+                            <a href="conge.html"><i class="fa fa-edit fa-3x"></i> Conge </a>
                         </li>
                 </ul>
                
@@ -109,7 +107,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12"> 
-                     <button class="button btn btn-danger square-btn-adjust" style="border-radius: 50%;">+</button>                       
+                     <button class="button btn btn-danger square-btn-adjust" style="border-radius: 50%;" onclick="showAdd()" >+</button>                       
                     </div>
                 </div>
                  <!-- /. ROW  -->
@@ -123,47 +121,9 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                    <fieldset> 
                         <legend>Manager:</legend>
                 <div class="row" id="Manager">
-               <!-- <div class="col-md-4 col-sm-4">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            Info Panel
-                        </div>
-                        <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="panel panel-warning">
-                        <div class="panel-heading">
-                            Warning Panel
-                        </div>
-                        <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="panel panel-danger">
-                        <div class="panel-heading">
-                            Danger Panel
-                        </div>
-                        <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
-                </div>-->
             </div>
-        </fieldset>                    <!-- /. ROW  -->
+        </fieldset>                   
+         <!-- /. ROW  -->
             
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->

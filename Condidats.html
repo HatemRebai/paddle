@@ -49,7 +49,7 @@ fieldset
     </style>
 </head>
 
-<body>
+<body onload="show()">
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -64,7 +64,7 @@ fieldset
   <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="./index.html" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>   
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
@@ -85,10 +85,10 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                         <a  href="Personnel.html"><i class="fa fa-qrcode fa-3x"></i> Personnels</a>
                     </li>	
                       <li  >
-                        <a  class="active-menu" href="Condidats.html"><i class="fa fa-table fa-3x"></i> Condidats</a>
+                        <a  class="active-menu" href="Candidats.html"><i class="fa fa-table fa-3x"></i> Candidats</a>
                     </li>
                     <li  >
-                        <a  href="#"><i class="fa fa-edit fa-3x"></i> Finance </a>
+                        <a  href="finance.html"><i class="fa fa-edit fa-3x"></i> Finance </a>
                     </li>			
 				 
                 <li>
@@ -103,53 +103,17 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12"> 
-                     <button class="button btn btn-danger square-btn-adjust" style="border-radius: 50%;">+</button>                       
+                     <a class="button btn btn-danger square-btn-adjust" href="./AjoutCondidats.html" style="border-radius: 50%;">+</a>                       
                     </div>
                 </div>
                  <!-- /. ROW  -->
                  <hr />
               <fieldset> 
-                <legend>Les Condidats:</legend>                   
-            <div class="row">
-                <div class="col-md-4 col-sm-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Default Panel
-                        </div>
-                        <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            Primary Panel
-                        </div>
-                        <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="panel panel-success">
-                        <div class="panel-heading">
-                            Success Panel
-                        </div>
-                        <div class="panel-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-                        </div>
-                        <div class="panel-footer">
-                            Panel Footer
-                        </div>
-                    </div>
-                </div>
+                <legend>Les Candidats:</legend>                   
+            <div id="listc" class="row">
+                
+                
+                
             </div>
         </fieldset> 
             </div>
@@ -164,8 +128,11 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
     <!-- METISMENU SCRIPTS -->
     <script src="assets/js/jquery.metisMenu.js"></script>
       <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
+    <!-- <script src="assets/js/custom.js"></script> -->
     
-   
+    <script src="Enties/LocalStorage.js"></script>
+    <script src="Enties/Personne.js"></script>
+    <script src="Enties/Condidat.js"></script>
+    <script src="Metier/CondidatMetier.js"></script>
 </body>
 </html>

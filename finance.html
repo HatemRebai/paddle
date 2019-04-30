@@ -92,9 +92,10 @@
   border-top: none;
 }
 </style>
+<script src="Enties/LocalStorage.js"></script>
+<script src="Metier/Finance.js"></script>
 </head>
-
-<body>
+<body onload="selectCoach();selectCondidat()">
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -134,7 +135,7 @@ font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</
                                 <a class="active-menu" href="Condidats.html"><i class="fa fa-table fa-3x"></i> Condidats</a>
                             </li>
                         <li  >
-                            <a  href="#"><i class="fa fa-edit fa-3x"></i> Finance </a>
+                            <a  href="finance.html"><i class="fa fa-edit fa-3x"></i> Finance </a>
                         </li>	
                         <li>
                                 <a href="conge.html"><i class="fa fa-edit fa-3x"></i> Conge </a>
@@ -149,61 +150,43 @@ font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</
         <div id="page-wrapper">
             <div id="page-inner">
                 <fieldset>
-                    <legend>Ajout Condidat:</legend>
                     <div class="row">
-                        <div>
-                           
+                        <div>   
                                 <div class="tab">
                                     <button class="tablinks" onclick="openCity(event, 'condidat')">Condidats</button>
                                     <button class="tablinks" onclick="openCity(event, 'personnel')">Personnels</button>
-              
                                   </div>
-                                  
                                   <div id="condidat" class="tabcontent">
                                     <h3>Condidat</h3>
                                     <div class="form-group"> 
-                                        <select class="form-control">
-                                             <option>Select Condidat </option>
-                                            <option>Coash One </option>
-                                            <option>Coash Two  </option>
-                                            <option>Coash Three  </option>
-                                            <option>Coash Four  </option>
+                                        <select class="form-control" id="listeCandidat" >
+                                              <option>Select Condidat </option> 
                                         </select>
                                     </div>
-                                
                                     <div class="form-group input-group">
                                         <span class="input-group-addon">Dt</span>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" id="montantC">
                                         <span class="input-group-addon">.00</span>
                                     </div>
-                                    <button type="reset" class="btn btn-primary">Annuler</button>
-    
-                                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                                    <button type="button" class="btn btn-success btn-sm" onclick="addFinanceC()">Ajouter</button>
+                                    <button type="reset" class="btn btn-primary btn-sm">Annuler</button>
                                   </div>
                                   
                                   <div id="personnel" class="tabcontent">
                                     <h3>Personnel</h3>
-                                    <div class="form-group"> 
-                                        <select class="form-control">
-                                             <option>Select Personnel </option>
-                                            <option>Coash One </option>
-                                            <option>Coash Two  </option>
-                                            <option>Coash Three  </option>
-                                            <option>Coash Four  </option>
-                                        </select>
+                                    <div class="form-group" > 
+                                        <select class="form-control"  id="listeCoash" >
+                                        <option >Choose a Coash</option>
+                                         </select>
                                     </div>
-                                
                                     <div class="form-group input-group">
                                         <span class="input-group-addon">Dt</span>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" id="montant">
                                         <span class="input-group-addon">.00</span>
                                     </div>
-                                    <button type="reset" class="btn btn-primary">Annuler</button>
-    
-                                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                                    <button type="button" class="btn btn-success btn-sm" onclick="addFinance()">Ajouter</button>
+                                    <button type="reset" class="btn btn-primary btn-sm">Annuler</button>
                                   </div>
-                                  
-                             
                         </div>
                     </div>
                 </fieldset>
@@ -219,7 +202,7 @@ font-size: 16px;"> <a href="#" class="btn btn-danger square-btn-adjust">Logout</
         <!-- METISMENU SCRIPTS -->
         <script src="assets/js/jquery.metisMenu.js"></script>
         <!-- CUSTOM SCRIPTS -->
-        <script src="assets/js/custom.js"></script>
+       
         <script>
             function openCity(evt, cityName) {
               var i, tabcontent, tablinks;
