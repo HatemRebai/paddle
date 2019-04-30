@@ -4,6 +4,7 @@ class ManagerMetier {
     managerUpdate;
     isUpdate = false;
     constructor() {
+        
         this.manager = new Manager(0, '', '', '', '', '', '', 0,0);
     }
     Consult() {
@@ -17,7 +18,8 @@ class ManagerMetier {
     }
           } 
           
-    add() {  
+    add() {
+        console.log("manager");  
         var idM = 0;
         this.Consult();
         if ((document.getElementById('nomP') != null) && (document.getElementById('prenomP') != null) && 
@@ -54,8 +56,9 @@ class ManagerMetier {
         }
                 this.tabERP[1] = ERP.Manager;
                localStorage.setItem("ERP",JSON.stringify(this.tabERP));
-                this.isUpdate = false;   
-    }   location.href = './Personnel.html';           
+                this.isUpdate = false;  
+                location.href = './Personnel.html'; 
+    }             
     }
     show() {
         this.Consult();
@@ -73,7 +76,7 @@ class ManagerMetier {
             html+= '</p><p>'
             html+=  ERP.Manager[i].tel 
             html+='</p><p>'
-            html+= ERP.Manager[i].addrress 
+            html+= ERP.Manager[i].address 
             html+='</p><p>'
             html+= ERP.Manager[i].categorie 
             html+= '</p>'
@@ -116,6 +119,7 @@ class ManagerMetier {
             document.getElementById('addressP').value = this.managerUpdate.addrress;
             document.getElementById('telP').value = this.managerUpdate.tel;
             document.getElementById('categorieP').value = this.managerUpdate.categorie;
+            document.getElementById('montantP').value = this.managerUpdate.salaire;
 
             this.isUpdate = true;
             

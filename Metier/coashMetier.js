@@ -54,6 +54,7 @@ class CoashMetier {
                
                localStorage.setItem("ERP",JSON.stringify(this.tabERP));
                 this.isUpdate = false;   
+               location.href = './Personnel.html';
                
     }
     show() {
@@ -72,7 +73,7 @@ class CoashMetier {
             html+= '</p><p>'
             html+=  ERP.Coash[i].tel 
             html+='</p><p>'
-            html+= ERP.Coash[i].addrress 
+            html+= ERP.Coash[i].address 
             html+='</p><p>'
             html+= ERP.Coash[i].categorie 
             html+= '</p>'
@@ -111,10 +112,12 @@ class CoashMetier {
             
             document.getElementById('nomP').value = this.coashUpdate.nom;
             document.getElementById('prenomP').value = this.coashUpdate.prenom;
-            document.getElementById('emailp').value = this.coashUpdate.email;
-            document.getElementById('addressP').value = this.coashUpdate.addrress;
+            document.getElementById('emailP').value = this.coashUpdate.email;
+            document.getElementById('addressP').value = this.coashUpdate.address;
             document.getElementById('telP').value = this.coashUpdate.tel;
             document.getElementById('categorieP').value = this.coashUpdate.categorie;
+            //document.getElementById('pswdP').value = this.coashUpdate.passwrd;
+            document.getElementById('montantP').value = this.coashUpdate.salaire;
 
             this.isUpdate = true;
             
@@ -140,6 +143,6 @@ class CoashMetier {
 
     }          
         }
-            coashMetier = new CoashMetier();
+coashMetier = new CoashMetier();
 
  
